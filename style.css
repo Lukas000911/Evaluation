@@ -1,0 +1,267 @@
+/*GLOBAL STYLE*/
+
+.dFlex {
+display: flex;
+}
+
+.column {
+flex-direction: column;
+}
+
+.textCent {
+text-align: center;
+}
+
+.justifyCenter {
+justify-content: center;
+}
+
+.alignCenter {
+align-items: center;
+}
+
+.justEnd {
+justify-content: end;
+}
+
+.alignEnd {
+align-items: flex-end;
+}
+
+.spaceBetween {
+justify-content: space-between;
+}
+
+.spaceAround {
+justify-content: space-around;
+}
+
+.spaceEven{
+justify-content: space-evenly;
+}
+
+.alignEven{
+align-items: space-evenly;
+}
+
+
+
+.w40 {
+width: 45%;
+}
+
+.w20 {
+width: 10%;
+}
+
+.w100 {
+width: 100%;
+}
+
+.h100{
+height: 100%;
+}
+
+.textEnd {
+text-align: end;
+}
+
+.h30{
+height: 30%;
+}
+
+.f20{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(66, 65, 65);
+}
+.mTop{
+    margin-top: 25px;
+}
+
+.mAuto{
+    margin: auto;
+}
+
+header{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*NAVIGATION STYLE*/
+
+
+#navigationBar{
+    width: 98vw;
+    height: 85px;
+    background-color: white;
+    display: flex;
+}
+
+#navMenuButtons{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#navMenuButtons div{
+    margin: 8px;
+}
+
+#coneyLogo h1{
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px; 
+    font-weight: 800;
+}
+
+#navMenuButtons i{
+    padding: 9px;
+    font-size: 18px;
+}
+
+#navSearchInput{
+    width: 150px;
+    border: none;
+    border-bottom: 1px solid black;
+    transition: 0.7s;
+    display: none
+}
+
+.fa-search{
+    background-color: #446ef7;
+    border-radius: 50%;
+    color: white;
+}
+
+.fa-search:hover{
+    cursor: pointer;
+}
+
+.fa-bars{
+    border-radius: 50%;
+    color: white;
+    background-color: gray;
+    margin-left: 5px;
+}
+.fa-bars:hover{
+    background-color: #446ef7;
+    color: white; 
+    cursor: pointer;
+}
+
+#navMenuButtons div:hover{
+    color:#446ef7;
+    cursor: pointer;
+}
+#navMenuButtons .fab:hover, .fa:hover{
+    color:#446ef7;
+    cursor: pointer;
+}
+
+#homeButton{
+    border-bottom: 1px solid #446ef7;
+    color: #446ef7;
+}
+
+/*HEADER IMAGE*/
+
+#headerImg{
+    width: 98vw;
+    height: 500px;
+    background-image: url('https://coney.qodeinteractive.com/wp-content/uploads/2016/12/masonry-r-slide-img-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#headerImg div{
+    font-size: 22px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+
+
+
+/*MAIN STYLE*/
+
+#socialMediaMain{
+    width: 98vw;
+    margin-top: 20px;
+    border-top: 1px solid rgb(180, 180, 180);
+}
+
+.secondaryMainCard{
+    height: 500px;
+    width: 20%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.secondaryMainCard p{
+    color: rgb(139, 139, 139);
+}
+
+.fa-twitter{
+    color:  #446ef7;
+}
+
+#instagramPhotos{
+    margin-top: 25px;
+    width: 98vw;
+    height: 280px;
+}
+#instagramPhotos img{
+    height: 100%;
+    width: 16.66%;
+}
+
+#instagramPhotos img:hover{
+    opacity: 50%;
+}
+
+/*FOOTER STYLE*/
+
+footer{
+    width: 98vw;
+    height: 240px;
+    background-color: rgb(29, 29, 29);
+}
+
+.cont80{
+    width: 80%;
+    height: 120px;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    color: white;
+}
+
+.cont80 div{
+    margin: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.fontWhite{
+    color: rgb(102, 102, 102);  
+}
+
+.fa-chevron-up{
+    color: white;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.lastLine{
+    height: 100px;
+    margin-top: 10px;
+}
