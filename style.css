@@ -290,7 +290,7 @@ footer{
     margin: 8px;
 }
 
-#confirmRegistration, #logInButton{
+#confirmRegistration, #logInButton, #createPostButton{
     padding: 10px;
     border: 1px solid black;
     border-radius: 10%;
@@ -299,7 +299,7 @@ footer{
     margin: 10px;
 }
 
-#confirmRegistration:hover, #logInButton:hover{
+#confirmRegistration:hover, #logInButton:hover, #createPostButton:hover{
     transform: scale(1.05);
     transition: 0.5s;
     cursor: pointer;

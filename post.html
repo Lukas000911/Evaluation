@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Log In</title>
+    <title>New Post</title>
     <link rel="stylesheet" href="style.css">
 
-    <script src="logscript.js" defer></script>
+    <script src="postscript.js" defer></script>
 
     <script src="https://kit.fontawesome.com/42762d49f1.js" crossorigin="anonymous"></script>
 
@@ -51,9 +51,12 @@
     <main>
         <section>
             <div class="dFlex alignCenter justifyCenter column">
-                <input type="text" placeholder="User Name" id="logName" class="regInputStyle">
-                <input type="password" placeholder="Password" id="logPass" class="regInputStyle">
-                <div id="logInButton">LOG IN</div>
+                <div class="mTop"><b>CREATE NEW POST</b></div>
+                <input type="text" placeholder="Enter image URL" id="imageUrl" class="regInputStyle">
+                <input type="text" placeholder="Enter title" id="postTitle" class="regInputStyle">
+                <input type="text" placeholder="Enter description" id="postDescription" class="regInputStyle">
+                <!-- <input type="text" placeholder="Enter secret key" id="enterSKey" class="regInputStyle"> -->
+                <div id="createPostButton">CREATE POST</div>
             </div>
         </section>
     </main>

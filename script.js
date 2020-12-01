@@ -111,21 +111,22 @@ function showAllPosts(){
 
         let title = document.createElement('div')
         title.innerText = item.title
-        title.style.overflow = 'hidden'
         title.style.fontWeight = '600'
         title.style.marginTop = '10px'
         title.style.fontSize = '18px'
         title.style.marginLeft = '5px'
+        title.style.wordWrap = 'break-word'
+        
 
 
         let description = document.createElement('div')
         description.innerText = item.description
         description.style.width = '90%'
-        description.style.overflow = 'hidden'
         description.style.color = '#666666'
         description.style.marginTop = '10px'
         description.style.fontSize = '15px'
         description.style.marginLeft = '5px'
+        description.style.wordWrap = 'break-word'
 
 
         let name = document.createElement('div')
