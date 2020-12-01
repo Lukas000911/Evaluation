@@ -112,6 +112,12 @@ body{
     margin: 8px;
 }
 
+#navMenuButtons a{
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
 #coneyLogo h1{
     margin-left: 30px;
     font-family: 'Montserrat', sans-serif;
@@ -241,6 +247,7 @@ footer{
     width: 98vw;
     height: 240px;
     background-color: rgb(29, 29, 29);
+    bottom: 0px;
 }
 
 .cont80{
@@ -273,3 +280,28 @@ footer{
     height: 100px;
     margin-top: 10px;
 }
+
+/*REGISTRATION PAGE*/
+
+
+.regInputStyle{
+    width: 300px;
+    height: 35px;
+    margin: 8px;
+}
+
+#confirmRegistration, #logInButton{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10%;
+    background-color: #446ef7;
+    color: white;
+    margin: 10px;
+}
+
+#confirmRegistration:hover, #logInButton:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
