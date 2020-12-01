@@ -70,16 +70,85 @@
 // secretKey, id (id stands for post id)
 
 
+let arr = []
+
 fetch('http://167.99.138.67:1111/getallposts')
     .then(resp => resp.json())
-    .then(data => console.log(data));
-
+    .then(data => {
+        data.data.map(item =>{
+            arr.push(item)
+        })
+       console.log(arr)
+       showAllPosts()
+    })
+    
 
 const expandSearch = document.getElementById('expandSearch')
 const navSearchInput = document.getElementById('navSearchInput')
+const allPosts = document.getElementById('allPosts')
+
 
 expandSearch.addEventListener('mouseenter', showSearch)
 
 function showSearch(){
     navSearchInput.style.display = 'flex'
 }
+
+
+
+function showAllPosts(){
+
+    arr.map(item => {
+        let card = document.createElement('div')
+        card.style.width = '360px'
+        card.style.margin = '7px'
+        
+        // card.style.border = '1px solid black'
+        
+
+        let image = document.createElement('img')
+        image.src = item.image
+        image.style.width = '100%'
+
+        let title = document.createElement('div')
+        title.innerText = item.title
+        title.style.overflow = 'hidden'
+        title.style.fontWeight = '600'
+        title.style.marginTop = '10px'
+        title.style.fontSize = '18px'
+        title.style.marginLeft = '5px'
+
+        let description = document.createElement('div')
+        description.innerText = item.description
+        description.style.width = '90%'
+        description.style.overflow = 'hidden'
+        description.style.color = '#666666'
+        description.style.marginTop = '10px'
+        description.style.fontSize = '15px'
+        description.style.marginLeft = '5px'
+
+        let name = document.createElement('div')
+        name.innerText = item.username
+        name.style.marginTop = '10px'
+        name.style.fontWeight = '600'
+        name.style.marginLeft = '5px'
+
+        let timestamp = document.createElement('div')
+        timestamp.innerText =new Date(item.timestamp).toDateString() 
+        timestamp.style.marginTop = '10px'
+        timestamp.style.marginLeft = '5px'
+
+
+        
+        card.appendChild(image)
+        card.appendChild(timestamp)
+        card.appendChild(title)
+        card.appendChild(description)
+        card.appendChild(name)
+        
+
+        allPosts.appendChild(card)
+    })
+}
+
+showAllPosts()

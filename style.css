@@ -227,6 +227,14 @@ body{
     opacity: 50%;
 }
 
+#allPosts{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 98vw;
+}
+
+
+
 /*FOOTER STYLE*/
 
 footer{
@@ -250,7 +258,7 @@ footer{
 }
 
 .fontWhite{
-    color: rgb(102, 102, 102);  
+    color: #666666;  
 }
 
 .fa-chevron-up{
