@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
+    <title>My Posts</title>
     <link rel="stylesheet" href="style.css">
 
-    <script src="regscript.js" defer></script>
+    <script src="mypostscript.js" defer></script>
 
     <script src="https://kit.fontawesome.com/42762d49f1.js" crossorigin="anonymous"></script>
 
@@ -13,9 +13,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet"></head>
 
-
 <body>
-
     <header>
         <nav>
             <div id="navigationBar" class="alignCenter spaceBetween">
@@ -42,7 +40,7 @@
                 
             </div>
         </nav>
-    
+
         <div id="headerImg" class="dFlex column justifyCenter alignCenter">
             <img src="https://coney.qodeinteractive.com/wp-content/uploads/2016/12/masonry-r-slide-img-2.png" alt="">
             <div>Developing inspiration</div>
@@ -51,12 +49,7 @@
 
     <main>
         <section>
-            <div class="dFlex alignCenter justifyCenter column">
-                <input type="text" placeholder="User Name" id="regName" class="regInputStyle">
-                <input type="password" placeholder="Password" id="regPass1" class="regInputStyle">
-                <input type="password" placeholder="Repeat Password" id="regPass2" class="regInputStyle">
-                <div id="confirmRegistration">CONFIRM REGISTRATION</div>
-            </div>
+            <div id="myPostContainer"></div>
         </section>
     </main>
 

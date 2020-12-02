@@ -55,7 +55,7 @@ width: 10%;
 }
 
 .w100 {
-width: 100%;
+width: 98vw;
 }
 
 .h100{
@@ -99,6 +99,14 @@ body{
     height: 85px;
     background-color: white;
     display: flex;
+}
+
+#navigationBarSingle{
+    width: 65vw;
+    height: 85px;
+    background-color: white;
+    display: flex;
+    margin: auto;
 }
 
 #navMenuButtons{
@@ -305,3 +313,15 @@ footer{
     cursor: pointer;
 }
 
+/*SINGLE POST*/
+
+.singlePostCard{
+    width: 750px;
+}
+
+/*MY POSTS*/
+
+.buttonStyle{
+    padding: 5px;
+    margin: 10px 8px 10px 0;
+}

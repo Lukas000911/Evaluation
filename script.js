@@ -102,6 +102,8 @@ function showAllPosts(){
         let card = document.createElement('div')
         card.style.width = '360px'
         card.style.margin = '7px'
+        card.setAttribute('id', item.id)
+        card.style.cursor = 'pointer'
         
         
         let image = document.createElement('img')
@@ -142,6 +144,9 @@ function showAllPosts(){
         timestamp.style.marginLeft = '5px'
 
         
+        card.addEventListener('click', openSinglePost)
+
+
         card.appendChild(image)
         card.appendChild(timestamp)
         card.appendChild(title)
@@ -153,3 +158,11 @@ function showAllPosts(){
 }
 
 showAllPosts()
+
+function openSinglePost(event){
+    let nameToSave = event.path[1].children[4].innerText
+    let idToSave = event.path[1].id
+    localStorage.setItem('id', idToSave)
+    localStorage.setItem('savedName', nameToSave)
+    window.location.href = 'singlepage.html'
+}
