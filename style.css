@@ -298,7 +298,7 @@ footer{
     margin: 8px;
 }
 
-#confirmRegistration, #logInButton, #createPostButton{
+#confirmRegistration, #logInButton, #createPostButton, #confirmEdit {
     padding: 10px;
     border: 1px solid black;
     border-radius: 10%;
@@ -307,7 +307,7 @@ footer{
     margin: 10px;
 }
 
-#confirmRegistration:hover, #logInButton:hover, #createPostButton:hover{
+#confirmRegistration:hover, #logInButton:hover, #createPostButton:hover, #confirmEdit:hover{
     transform: scale(1.05);
     transition: 0.5s;
     cursor: pointer;
@@ -324,4 +324,56 @@ footer{
 .buttonStyle{
     padding: 5px;
     margin: 10px 8px 10px 0;
+    background-color: #446ef7;
+    color: white;
+}
+
+.buttonStyle:hover{
+    background-color: black;
+    color: #446ef7;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#editModal{
+    border: 1px solid black;
+    margin: auto;
+    width: 380px;
+    height: 400px;
+    display: none;
+    background-color: burlywood;
+    position: fixed;
+    top: 380px;
+    left: 680px;
+}
+
+#deleteModal{
+    display: none;
+    background-color: burlywood;
+    position: fixed;
+    top: 380px;
+    left: 680px;
+    border: 1px solid black;
+    margin: auto;
+    width: 380px;
+    height: 200px;
+}
+
+.yesNoStyle{
+    height: 20px;
+    padding: 15px;
+    border: 1px solid black;
+    background-color: #446ef7;
+    color: white;
+    margin-right: 15px;
+    margin-top: 50px;
+}
+
+.yesNoStyle:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: black;
+    color: #446ef7;
+    cursor: pointer;
 }

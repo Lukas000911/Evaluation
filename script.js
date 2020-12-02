@@ -103,12 +103,13 @@ function showAllPosts(){
         card.style.width = '360px'
         card.style.margin = '7px'
         card.setAttribute('id', item.id)
-        card.style.cursor = 'pointer'
+        
         
         
         let image = document.createElement('img')
         image.src = item.image
         image.style.width = '100%'
+        image.style.cursor = 'pointer'
 
 
         let title = document.createElement('div')
@@ -144,7 +145,7 @@ function showAllPosts(){
         timestamp.style.marginLeft = '5px'
 
         
-        card.addEventListener('click', openSinglePost)
+        image.addEventListener('click', openSinglePost)
 
 
         card.appendChild(image)
