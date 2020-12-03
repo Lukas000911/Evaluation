@@ -86,25 +86,45 @@ fetch('http://167.99.138.67:1111/getallposts')
 const expandSearch = document.getElementById('expandSearch')
 const navSearchInput = document.getElementById('navSearchInput')
 const allPosts = document.getElementById('allPosts')
+const sortButtonUp = document.getElementById('sortButtonUp')
+const sortButtonDown = document.getElementById('sortButtonDown')
 
+let trigger = true
 
 expandSearch.addEventListener('mouseenter', showSearch)
+sortButtonUp.addEventListener('click', sortByTimeUp)
+
 
 function showSearch(){
     navSearchInput.style.display = 'flex'
 }
 
+function compare(a, b){
+    const timeA = a.timestamp;
+    const timeB = b.timestamp;
 
+    let comparison = 0
+    if(timeA > timeB){
+        comparison = 1;
+    } else if(timeA < timeB){
+        comparison = -1;
+    }
+    if(trigger){
+        return comparison;
+    } else {
+        return comparison * -1;
+    }
+}
 
 function showAllPosts(){
-
+    allPosts.innerHTML = ''
+    arr.sort(compare)
     arr.map(item => {
         let card = document.createElement('div')
         card.style.width = '360px'
-        card.style.margin = '7px'
+        card.style.margin = '10px'
         card.setAttribute('id', item.id)
-        
-        
+        card.style.display = 'inline-block'
         
         
         let image = document.createElement('img')
@@ -158,6 +178,9 @@ function showAllPosts(){
         
         allPosts.appendChild(card)
     })
+    
+
+    
 }
 
 showAllPosts()
@@ -174,4 +197,9 @@ function showUserPosts(event){
     let singleUser = event.target.innerText
     localStorage.setItem('singleUser', singleUser)
     window.location.href = 'singleUserPost.html'
+}
+
+function sortByTimeUp(){
+    trigger = !trigger
+    showAllPosts()
 }

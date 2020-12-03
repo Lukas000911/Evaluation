@@ -242,14 +242,16 @@ body{
 }
 
 #allPosts{
-    display: flex;
-    flex-wrap: wrap;
-    
+    column-count: 5;
     max-width: 98vw;
     
 }
 
-
+#sortButtonUp, #sortButtonDown{
+    padding: 5px;
+    background-color: blue;
+    color: white;
+}
 
 /*FOOTER STYLE*/
 
