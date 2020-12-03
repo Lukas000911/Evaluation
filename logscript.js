@@ -8,8 +8,10 @@ logInButton.addEventListener('click', logInPage)
 function logInPage(){
  
     let logUser = {
-        name: localStorage.getItem('name'),
-        password: localStorage. getItem('password')
+        name: logName.value,
+        password: logPass.value
+        // name: localStorage.getItem('name'),
+        // password: localStorage. getItem('password')
     }
     fetch('http://167.99.138.67:1111/login',{
         method: 'POST',
@@ -19,6 +21,15 @@ function logInPage(){
         },
         body: JSON.stringify(logUser)
     }).then(response => response.json())
-        .then(data => localStorage.setItem('secretKey', data.secretKey),
-        window.location.href = 'index.html')
+        .then(data =>{
+            if(data.success){
+                localStorage.setItem('secretKey', data.secretKey),
+                localStorage.setItem('name', logName.value),
+                localStorage.setItem('password', logPass.value),
+                window.location.href = 'index.html'
+            } else{
+                alert(`${data.message}`)
+            }
+        }) 
+    
 }

@@ -19,8 +19,16 @@ function registerUser(){
         },
         body: JSON.stringify(newUser)
     }).then(response => response.json())
-        .then(data => localStorage.setItem('name', regName.value),
-        localStorage.setItem('password', regPass1.value),
-        window.location.href = 'login.html')
+        .then(data =>{
+            if(data.success){
+                localStorage.setItem('name', regName.value),
+                localStorage.setItem('password', regPass1.value),
+                alert('You registered successfully. You can now log in')
+                window.location.href = 'login.html'
+            } else{
+                alert(`${data.message}`)
+            }
+        })
+    
 }
 

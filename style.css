@@ -168,7 +168,7 @@ body{
     cursor: pointer;
 }
 
-#navMenuButtons div:hover{
+#navMenuButtons a:hover{
     color:#446ef7;
     cursor: pointer;
 }
@@ -244,7 +244,9 @@ body{
 #allPosts{
     display: flex;
     flex-wrap: wrap;
+    
     max-width: 98vw;
+    
 }
 
 

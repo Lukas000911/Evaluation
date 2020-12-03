@@ -130,11 +130,6 @@ function editPost(event){
 }
 
 
-// delete existing post (have to have secret key)
-// http://167.99.138.67:1111/deletepost
-// send JSON object with these keys:
-// secretKey, id (id stands for post id)
-
 function deletePost(event){
 
     deleteModal.style.display = 'flex'

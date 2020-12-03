@@ -106,6 +106,7 @@ function showAllPosts(){
         
         
         
+        
         let image = document.createElement('img')
         image.src = item.image
         image.style.width = '100%'
@@ -137,6 +138,7 @@ function showAllPosts(){
         name.style.marginTop = '10px'
         name.style.fontWeight = '600'
         name.style.marginLeft = '5px'
+        name.style.cursor ='pointer'
 
 
         let timestamp = document.createElement('div')
@@ -146,7 +148,7 @@ function showAllPosts(){
 
         
         image.addEventListener('click', openSinglePost)
-
+        name.addEventListener('click', showUserPosts)
 
         card.appendChild(image)
         card.appendChild(timestamp)
@@ -166,4 +168,10 @@ function openSinglePost(event){
     localStorage.setItem('id', idToSave)
     localStorage.setItem('savedName', nameToSave)
     window.location.href = 'singlepage.html'
+}
+
+function showUserPosts(event){
+    let singleUser = event.target.innerText
+    localStorage.setItem('singleUser', singleUser)
+    window.location.href = 'singleUserPost.html'
 }
